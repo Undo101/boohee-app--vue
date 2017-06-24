@@ -74,11 +74,13 @@
           </div>
         </router-link>
         <div class="other-record">
-          <div v-for="mark in marks" class="marks" `>
+          <div v-for="mark in marks" class="record_mark">
             <router-link to=mark.path>
-              <img :src=mark.url alt="">
-              <div>{{mark.value}}</div>
-              <img src="../../assets/images/more.png" alt="">
+              <div class="marks_bg" :background-color="mark.bgc">
+                <img :src=mark.url alt="">
+              </div>
+              <span class="marks_value">{{mark.value}}</span>
+              <img class="more" src="../../assets/images/more.png" alt="">
             </router-link>
           </div>
         </div>
@@ -92,9 +94,6 @@ import navbar from '../navbar'
 import {mapState} from 'vuex'
 export default {
   name:'marks',
-  mounted:{
-    
-  },
   data() {
     return{
       per:this.$store.state.per,
@@ -111,20 +110,24 @@ export default {
         id:2,
         url:'../static/images/rule.png',
         value:'围度记录',
-        path:'../message'
+        path:'../message',
+        bgc:'red'
       },{
         id:3,
         url:'../static/images/flower.png',
         value:'生理期记录',
-        path:'../message'
+        path:'../message',
+        bgc:'red'
       },{
         id:4,
         url:'../static/images/moon.png',
         value:'睡眠记录',
-        path:'../message'
+        path:'../message',
+        bgc:'red'
       },
       ],
       itemones:this.$store.state.itemones,
+      time:new Date(),
       itemtwos:[1,2,3,4,5]
     }
   },
@@ -133,13 +136,7 @@ export default {
     navbar
   },
   methods:{
-    getDate () {
-      var date = new Date()
-      this.nowYear = date.getFullYear();
-      this.nowMonth = date.getMonth();
-      this.nowDate = date.getDate();
-      this.$store.dispatch('getDate')
-    }
+  
   }
   // template: `<span>{{ per }}</span>`,
   // computed:{
@@ -361,5 +358,32 @@ export default {
   position: absolute;
   text-align: center;
   line-height: 2.08333rem;
+}
+.record_mark{
+  height: 4.416666rem;
+  width: 100%;
+  background-color:#fff;
+  /*float: left;*/
+  display: flex;
+  align-items: center;
+  /*justify-content: space-around;*/
+}
+.marks_value{
+  font-size: 1.5rem;
+  color: black;
+  width: 100%;
+  /*margin-left:5.3rem; */
+}
+.marks_bg{
+  height: 2rem;
+  width: 2rem;
+  margin-left:1.4166rem;
+  margin-top: 1.4166rem;
+  border-radius:1.5rem;
+  background-color: red;
+}
+.marks_bg img{
+  height: 1.9rem;
+  width: 1.9rem;
 }
 </style>

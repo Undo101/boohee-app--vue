@@ -35,7 +35,9 @@ export default {
                 {id:2,name:'多喝水'},
                 {id:3,name:'便便'},
                 {id:4,name:'早睡'},
-                {id:5,name:'早起'}],
+                {id:5,name:'早起'}
+                // {id:6,name:'午睡'}
+                ],
             day: this.$store.state.day
         }
     },
@@ -58,9 +60,13 @@ export default {
 
 <style lang="css" scoped>
 .wraper{
-  padding-top:4rem; 
+  /*padding-top:4rem; */
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+.margin-top{
+    margin-left: 2rem
 }
 .habits{
     height: 6.6667rem;

@@ -6,7 +6,7 @@ export default {
         // console.log(state.day[0].count)
         state.day[index].isActive = false
         state.day[index].com = true
-        state.per += (6%10)
+        state.per += (16.66)
     },
     lightHigh: (state,index) => {
                 state.chooses[index].isSecond = true
@@ -14,7 +14,5 @@ export default {
         state.chooses.forEach(list => {
             list.light=false})
         state.chooses[index].light = true
-        
     }
-
 }

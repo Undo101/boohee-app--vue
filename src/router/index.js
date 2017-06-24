@@ -13,6 +13,8 @@ import dietary_two from '@/components/slim/slim-components/dietary_two'
 import addmeal from '@/components/slim/slim-components/addmeal'
 import common from '@/components/slim/slim-components/common.vue'
 import other from '@/components/slim/slim-components/other.vue'
+import Choiceness from '@/components/friend/Choiceness.vue'
+import CircleFri from '@/components/friend/CircleFri.vue'
 
 Vue.use(Router)
 
@@ -33,6 +35,11 @@ export default new Router({
     },
     {
       path: '/',
+      name: 'Slim',
+      component: Slim
+    },
+     {
+      path: '/slim',
       name: 'Slim',
       component: Slim
     },
@@ -65,7 +72,16 @@ export default new Router({
     {
       path: '/friend',
       name: 'Friend',
-      component: Friend
+      component: Friend,
+      children:[
+        {
+          path:'/',
+          component:Choiceness
+        },{
+          path:'/CircleFri',
+          component:CircleFri
+        }
+      ]
     },
      {
       path: 'shop/Shop',

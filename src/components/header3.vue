@@ -33,8 +33,8 @@ export default {
     display: flex;
     vertical-align: middle;
     align-items: center;
-    position: fixed;
-    top: 0;
+    /*padding-top: 0;
+    top: 0;*/
     border-bottom: 1px solid #d5d5d5;
  }
 .title div{

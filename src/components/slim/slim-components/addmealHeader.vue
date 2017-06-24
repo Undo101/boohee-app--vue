@@ -1,6 +1,15 @@
 <template>
- <div class="wraper">
-    <headr></headr>
+    <div class="head-wraper">
+      <div class="header-back">
+      <router-link to="/slim-components/dietary_two">
+      <div class="back" @click="goHealthone">
+        <img src="../../../assets/images/back.png" alt="">
+      </div>
+      <div class="title">
+          <!--<div>{{title}}</div>-->
+      </div>
+      </router-link>
+    </div>
     <router-link to="/search">
      <div class="head-search">
         <div class="input">
@@ -11,7 +20,7 @@
         </div>
      </div>
     </router-link>
-    <div class="content">
+    <div class="head_content">
       <div class="outer-scroll">
         <div class="inner-scroll">
           <div class="content_bar">
@@ -54,7 +63,6 @@ export default {
       let id = this.$store.state.chooses.id
       if(id==1){
         console.log(event.target.dataset.id)
-        
       }
       // let id = event.target.dataset.id
       // let Id = this.$store.state.chooses[index].id
@@ -67,6 +75,9 @@ export default {
       // console.log(event.target.dataset.id)
       // if(this.chooses[index].id===id){
       // }
+    },
+    goHealthone:function () {
+      
     }
   },
   computed:{
@@ -78,12 +89,28 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.wraper{
-  padding-top:4rem; 
+.header-back{
+    height:4rem;
+    width: 100%;
+    background-color: #F9F9F9;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    /*padding-top: 0;
+    top: 0;*/
+    border-bottom: 1px solid #d5d5d5;
+ }
+.title div{
+    font-size: 1.7rem;
+    font-weight: 580;
+}
+.head-wraper{
+  height: 11.958333rem;
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   flex-direction: column;
-  /*overflow: hidden;*/
+  position: fixed;
+  width: 100%;  
 }
 .head-search{
   height:4.53rem;
@@ -92,6 +119,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*border-bottom: 1px solid #f9f9f9;*/
   /*position: fixed;*/
  }
  .sear{
@@ -120,28 +148,21 @@ export default {
  .scan {
    margin-left: 1rem;
  }
- .content{
-  /*height: 4.57rem;*/
+ .head_content{
   width: 100%;
-  background-color: #F9F9F9;
-  /*overflow: hidden;*/
-  /*overflow-x: scroll;*/
-  /*margin-bottom:2rem;*/
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
+  margin-top: 0;
  }
  .outer-scroll{
    height: 4.23rem;
    width: 100%;
-   /*position: relative;*/
-   overflow: hidden;
+   position: fixed;
+   overflow-x: scroll;
+   overflow-y:hidden;
+   
  }
  .inner-scroll{
-   /*position: absolute;*/
-   /*left: 0;*/
-   overflow-y:hidden;
-   overflow-x: scroll 
+   height:4.23rem;
+   margin-bottom: 2rem;
  }
  .content_bar{
   height:4.23rem;
@@ -150,8 +171,6 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 2rem;
-  /*margin-left: -6rem;*/
  }
  .notchoose{
    min-width: 5rem;
@@ -177,10 +196,5 @@ export default {
    justify-content: center;
    text-decoration: none;
  }
- .moveleft{
-   margin-left:-9rem; 
- }
- .moveright{
-   margin-left:0; 
- }
+
 </style>

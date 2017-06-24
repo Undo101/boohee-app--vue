@@ -35,7 +35,13 @@ export default {
     count: 0,
     isActive:true,
     com:false
-  }
+  },
+  // {
+  //   id: 6,
+  //   count: 0,
+  //   isActive:true,
+  //   com:false
+  // }
   ],
   chooses:[
     {id:0, title:'常见', dark:true, light:true, isActive:true,linkTo:'/common',},
@@ -45,13 +51,19 @@ export default {
     {id:4, title:'我的菜肴', dark:true, light:false, isActive:false,linkTo:'/other',}
       ],
   foods:[
-    {id:1,pic:'../../static/images/hotrice.png',desc:''},
-    {id:1,pic:'../../static/images/egg.jpg',desc:''},
-    {id:1,pic:'../../static/images/bun.png',desc:''},
-    {id:1,pic:'../../static/images/cuke.jpg',desc:''},
-    {id:1,pic:'../../static/images/apple.jpg',desc:''},
-    {id:1,pic:'../../static/images/tomato.jpg',desc:''},
-    {id:1,pic:'../../static/images/bread.jpg',desc:''}
+    {id:1,pic:'../../static/images/hotrice.png',desc:'米饭',fat:'116'},
+    {id:1,pic:'../../static/images/egg.jpg',desc:'鸡蛋',fat:'144'},
+    {id:1,pic:'../../static/images/bun.png',desc:'馒头',fat:'233'},
+    {id:1,pic:'../../static/images/yoghourt.jpg',desc:'酸奶',fat:'72'},
+    {id:1,pic:'../../static/images/cuke.jpg',desc:'黄瓜',fat:'16'},
+    {id:1,pic:'../../static/images/apple.jpg',desc:'苹果',fat:'54'},
+    {id:1,pic:'../../static/images/tomato.jpg',desc:'番茄',fat:'20'},
+    {id:1,pic:'../../static/images/bread.jpg',desc:'面包',fat:'313'},
+    {id:1,pic:'../../static/images/chicken.png',desc:'鸡胸肉',fat:'133'},
+    {id:1,pic:'../../static/images/honey.png',desc:'蜂蜜',fat:'321'},
+    {id:1,pic:'../../static/images/maize.jpg',desc:'玉米',fat:'112'},
+    {id:1,pic:'../../static/images/milk.jpg',desc:'牛奶',fat:'54'},
+    {id:1,pic:'../../static/images/steamedbun.jpg',desc:'包子',fat:'227'}
   ],
   itemones:[
     {id:1,isChecked:false},

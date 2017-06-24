@@ -1,6 +1,15 @@
 <template>
   <div class="wraper">
-    <headr></headr>
+    <div class="header-back">
+      <router-link to="/slim">
+      <div class="back">
+        <img src="../../../assets/images/back.png" alt="">
+      </div>
+      <div class="title">
+          <!--<div>{{title}}</div>-->
+      </div>
+      </router-link>
+    </div>
     <div class="contain">
       <div class="compute-meal">
        <div class="col-xs-4"><span>摄入</span><div class="numleft">0</div></div>
@@ -45,9 +54,24 @@ export default {
 </script>
 <style lang="css" scoped>
   .wraper{
-  padding-top:4rem; 
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+.header-back{
+    height:4rem;
+    width: 100%;
+    background-color: #F9F9F9;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    /*padding-top: 0;
+    top: 0;*/
+    border-bottom: 1px solid #d5d5d5;
+ }
+.title div{
+    font-size: 1.7rem;
+    font-weight: 580;
 }
  .compute-meal{
    height: 11.25rem;
