@@ -56,7 +56,7 @@ export default {
 
 <style lang="css" scoped>
 .wraper{
-  padding-top:4rem; 
+  /*padding-top:4rem; */
 }
 .messages{
   height: 6.2rem;

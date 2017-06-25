@@ -1,1 +1,0 @@
-export const ADD_HEALTHPER = 'ADD_HEALTHPER'  //在健康习惯里勾选一项后已完成加一
