@@ -8,48 +8,97 @@
 * 对于组件化开发模式的框架来说，路由的搭建很有技巧，子路由的配置可以让整个项目的结构变得简单明了，最开始的时候没有注意到这个问题，严重影响进度，好在及时发现并改正了
 ##目前具体功能实现：
 1. **目录结构**
-        |—— build
-        |—— config
-        |—— src : dev resources
-        | |—— assets/
-        | |     |——images
-        | |     |——photo
-        | |—— components/
-        | |     |——friend/ 发现-朋友圈-页
-        | |     |——me/ 我-页
-        | |     |——shop/商店 -页
-        | |     |——slim/健康-页
-        | |     |   |——slim-components/ 健康页内其他页
-        | |     |   |   |——addmeal.vue
-        | |     |   |   |——addmealHeader.vue
-        | |     |   |   |——common.vue
-        | |     |   |   |——dietary_two.vue
-        | |     |   |   |——exercise_four.vue
-        | |     |   |   |——header4.vue
-        | |     |   |   |——health_one.vue
-        | |     |   |   |——other.vue
-        | |     |   |   |——weight_three.vue
-        | |     |   |——Slim.vue
-        | |     |——header.vue
-        | |     |——header2.vue
-        | |     |——header3.vue
-        | |     |——message.vue
-        | |     |——navbar.vue
-        | |     |——search.vue
-        | |—— fetch/
-        | |     |——api.js axios请求
-        | |—— router/
-        | |     |——index.js 路由映射
-        | |—— vuex
-        | |     |——actions.js
-        | |     |——mutations.js
-        | |     |——state.js
-        | |     |——store.js
-        | |—— App.vue :boohee SPA
-        | |—— main.js 
-        |—— static : static files
-    ... ...
-
+       D:.
+│  .babelrc
+│  .editorconfig
+│  .gitignore
+│  .postcssrc.js
+│  index.html
+│  package.json
+│  README.md
+│  yarn.lock
+│
+├─build
+│      build.js
+│      check-versions.js
+│      dev-client.js
+│      dev-server.js
+│      utils.js
+│      vue-loader.conf.js
+│      webpack.base.conf.js
+│      webpack.dev.conf.js
+│      webpack.prod.conf.js
+│
+├─config
+│      dev.env.js
+│      index.js
+│      prod.env.js
+│
+├─src
+│  │  App.vue
+│  │  main.js
+│  │
+│  ├─assets
+│  │  ├─images
+│  │  │
+│  │  └─photo
+│  │
+│  ├─components
+│  │  │  header.vue
+│  │  │  header2.vue
+│  │  │  header3.vue
+│  │  │  message.vue
+│  │  │  navbar.vue
+│  │  │  search.vue
+│  │  │
+│  │  ├─friend
+│  │  │      Choiceness.vue
+│  │  │      CircleFri.vue
+│  │  │      Friend.vue
+│  │  │
+│  │  ├─me
+│  │  │      Me.vue
+│  │  │
+│  │  ├─second
+│  │  │      Content.vue
+│  │  │      message.vue
+│  │  │
+│  │  ├─shop
+│  │  │      Shop.vue
+│  │  │
+│  │  └─slim
+│  │      │  Slim.vue
+│  │      │
+│  │      └─slim-components
+│  │              addmeal.vue
+│  │              addmealHeader.vue
+│  │              common.vue
+│  │              dietary_two.vue
+│  │              exercise_four.vue
+│  │              header4.vue
+│  │              health_one.vue
+│  │              other.vue
+│  │              weight_three.vue
+│  │
+│  ├─fetch
+│  │      api.js
+│  │
+│  ├─library
+│  │      mint.js
+│  │
+│  ├─router
+│  │      index.js
+│  │
+│  └─vuex
+│          actions.js
+│          mutations.js
+│          state.js
+│          store.js
+│
+└─static
+    │  .gitkeep
+    │
+    └─images
 ## Build Setup
 
 ``` bash
