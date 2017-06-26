@@ -12,39 +12,39 @@
     |—— config
     |—— src : dev resources
     | |—— assets/
-    | |     |___images
-    | |     |___photo
+    | |     |——images
+    | |     |——photo
     | |—— components/
-    | |     |___friend/ 发现-朋友圈-页
-    | |     |___me/ 我-页
-    | |     |___shop/商店 -页
-    | |     |___slim/健康-页
-    | |     |   |___slim-components/ 健康页内其他页
-    | |     |   |   |___addmeal.vue
-    | |     |   |   |___addmealHeader.vue
-    | |     |   |   |___common.vue
-    | |     |   |   |___dietary_two.vue
-    | |     |   |   |___exercise_four.vue
-    | |     |   |   |___header4.vue
-    | |     |   |   |___health_one.vue
-    | |     |   |   |___other.vue
-    | |     |   |   |___weight_three.vue
-    | |     |   |___Slim.vue
-    | |     |___header.vue
-    | |     |___header2.vue
-    | |     |___header3.vue
-    | |     |___message.vue
-    | |     |___navbar.vue
-    | |     |___search.vue
+    | |     |——friend/ 发现-朋友圈-页
+    | |     |——me/ 我-页
+    | |     |——shop/商店 -页
+    | |     |——slim/健康-页
+    | |     |   |——slim-components/ 健康页内其他页
+    | |     |   |   |——addmeal.vue
+    | |     |   |   |——addmealHeader.vue
+    | |     |   |   |——common.vue
+    | |     |   |   |——dietary_two.vue
+    | |     |   |   |——exercise_four.vue
+    | |     |   |   |——header4.vue
+    | |     |   |   |——health_one.vue
+    | |     |   |   |——other.vue
+    | |     |   |   |——weight_three.vue
+    | |     |   |——Slim.vue
+    | |     |——header.vue
+    | |     |——header2.vue
+    | |     |——header3.vue
+    | |     |——message.vue
+    | |     |——navbar.vue
+    | |     |——search.vue
     | |—— fetch/
-    | |     |___api.js axios请求
+    | |     |——api.js axios请求
     | |—— router/
-    | |     |___index.js 路由映射
+    | |     |——index.js 路由映射
     | |—— vuex
-    | |     |___actions.js
-    | |     |___mutations.js
-    | |     |___state.js
-    | |     |___store.js
+    | |     |——actions.js
+    | |     |——mutations.js
+    | |     |——state.js
+    | |     |——store.js
     | |—— App.vue :boohee SPA
     | |—— main.js 
     |—— static : static files
